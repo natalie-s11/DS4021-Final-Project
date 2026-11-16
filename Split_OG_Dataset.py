@@ -10,6 +10,10 @@ os.makedirs("Data", exist_ok=True)
 # Load the dataset
 df = pd.read_csv("Credit Risk Benchmark Dataset.csv")
 
+# Get age statistics for pre-requisite assignment 
+print("Mean Age:", df["age"].mean())
+print("Age Standard Deviation:", df["age"].std())
+
 # Separate features (X) and target (y)
 X = df.drop(columns=["dlq_2yrs"])
 y = df["dlq_2yrs"]
